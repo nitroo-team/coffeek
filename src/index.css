@@ -1,0 +1,196 @@
+:root {
+	--gold: #8A7101;
+	--black: #0a0702;
+	--gray-dark: #333;
+	--gray-light: #ccc;
+	--red: crimson;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	cursor: pointer;
+	outline: none;
+}
+
+#root {
+	width: 100%;
+	height: 100%;
+
+}
+
+.landing {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(45deg, rgba(0, 0, 0, 0.7),
+			rgba(0, 0, 0, 0.7)), url("./images/coffee-landing-main.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-origin: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.landing #can {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.loading-content {
+	box-sizing: border-box;
+	padding: 50px;
+	max-width: 500px;
+	width: 80%;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(5px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.loading-content .logo {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	color: var(--gold);
+	margin-bottom: 20px;
+}
+
+.loading-content .logo>img {
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+.loading-content .buttons {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+
+.loading-content .buttons button,
+.loading-content .buttons a {
+	background: none;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+	padding: 10px;
+	white-space: nowrap;
+	margin: 5px;
+	outline: none;
+	font-size: 20px;
+}
+
+.loading-content .buttons #go-to-site {
+	border: 1px solid var(--gold);
+	color: var(--gold);
+	text-decoration: none;
+}
+
+.loading-content .buttons #download-app {
+	background-color: var(--gold);
+}
+
+#wave {
+	width: 100%;
+	height: 130px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+#wave .wave1 {
+	background-image: url("./images/wave1.png");
+	animation: waveMove 10s both infinite;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	filter: opacity(.8) brightness(40%);
+}
+
+#wave .wave2 {
+	background-image: url("./images/wave2.png");
+	animation: waveMove2 10s .4s both infinite;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	filter: opacity(.5) brightness(40%);
+}
+
+
+
+@keyframes waveMove {
+	0% {
+		background-position-x: 0;
+	}
+
+	50% {
+		background-position-x: 1000px;
+	}
+
+	100% {
+		background-position-x: 0;
+	}
+}
+
+@keyframes waveMove2 {
+	0% {
+		background-position-x: 1000px;
+	}
+
+	50% {
+		background-position-x: 0px;
+	}
+
+	100% {
+		background-position-x: 1000px;
+	}
+}
+
+
+.title {
+	width: 90%;
+	height: 20px;
+	color: var(--gray-light);
+	font-size: 25px;
+	border-bottom: 1px solid var(--gray-light);
+	padding: 10px 0;
+}
+
+@media only screen and (min-width : 600px) {
+
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: rgba(0, 0, 0, 0.5);
+	}
+
+	/* scroll button */
+	::-webkit-scrollbar-thumb {
+		background: #888;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
+}
