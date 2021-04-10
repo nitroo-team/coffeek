@@ -5,9 +5,10 @@ import './profile.css';
 
 function Profile() {
     return (
-        <div>
-            
-        </div>
+        <main className="profile">
+            <div></div>
+            <div></div>
+        </main>
     )
 }
 
